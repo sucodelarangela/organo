@@ -9,7 +9,7 @@ import InputField from '../InputField';
 import DropdownList from '../DropdownList';
 import Button from '../Button';
 
-const Form = () => {
+const Form = (props) => {
     const teams = [
         'Programação',
         'Front-End',
@@ -28,7 +28,13 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('O form foi submetido =>', name, job, image, team);
+        // sending professional data to App.js state
+        props.registeredProfessionals({
+            name,
+            job,
+            image,
+            team
+        });
     };
 
     return (
