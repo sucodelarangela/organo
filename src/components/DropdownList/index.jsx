@@ -2,7 +2,6 @@
 import './style.css';
 
 const DropdownList = (props) => {
-    console.log(props.items);
 
     return (
         <div className='dropdown-list'>
