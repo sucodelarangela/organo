@@ -11,13 +11,13 @@ import Button from '../Button';
 
 const Form = (props) => {
     const teams = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
+        'Neutra',
+        'Nilfgaard',
+        'Monstros',
+        'Skellige',
+        'Reinos do Norte',
+        "Scoia'tael",
+        'Sindicato'
     ];
 
     // states
@@ -42,14 +42,14 @@ const Form = (props) => {
             <form onSubmit={handleSubmit}>
                 <h2>Preencha os dados para criar os cards do colaborador</h2>
                 <InputField
-                    label='Nome'
+                    label='Nome da carta'
                     placeholder='Digite seu nome'
                     required={true}
                     value={name}
                     changed={value => setName(value)}
                 />
                 <InputField
-                    label='Cargo'
+                    label='Tipo de carta'
                     placeholder='Digite seu cargo'
                     required={true}
                     value={job}
@@ -62,7 +62,7 @@ const Form = (props) => {
                     changed={value => setImage(value)}
                 />
                 <DropdownList
-                    label='Time'
+                    label='Facção'
                     items={teams}
                     value={team}
                     changed={value => setTeam(value)}
