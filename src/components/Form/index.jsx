@@ -11,7 +11,7 @@ import Button from '../Button';
 
 const Form = (props) => {
     const teams = [
-        'Neutra',
+        'Neutros',
         'Nilfgaard',
         'Monstros',
         'Skellige',
@@ -40,7 +40,7 @@ const Form = (props) => {
     return (
         <section className='formulario'>
             <form onSubmit={handleSubmit}>
-                <h2>Preencha os dados para criar os cards do colaborador</h2>
+                <h2>Preencha os dados para criar os cards</h2>
                 <InputField
                     label='Nome da carta'
                     placeholder='Digite seu nome'

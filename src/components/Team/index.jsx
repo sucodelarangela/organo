@@ -1,9 +1,20 @@
 import './style.css';
 
-const Team = () => {
+const Team = (props) => {
     return (
-        <div>Team</div>
+        <section
+            className='team'
+            style={{
+                backgroundColor: props.secondaryColor
+            }}
+        >
+            <h3
+                style={{ borderColor: props.primaryColor }}
+            >{props.name}</h3>
+        </section>
     );
 };
 
 export default Team;
+
+// when we have components that only receives data, we usually call it DUMB COMPONENT
