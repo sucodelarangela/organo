@@ -14,7 +14,7 @@ const Team = (props) => {
 
             <div className='professionals'>
                 {
-                    props.professionals.map(professional => <Card key={professional.name} name={professional.name} job={professional.job} image={professional.image} />)
+                    props.professionals.map(professional => <Card key={professional.name} cardColor={props.primaryColor} name={professional.name} job={professional.job} image={professional.image} />)
                 }
             </div>
         </section>

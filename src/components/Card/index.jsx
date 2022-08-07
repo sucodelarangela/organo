@@ -1,10 +1,10 @@
 import './style.css';
 
 // DUMB COMPONENT
-const Card = ({ name, job, image }) => {
+const Card = ({ name, job, image, cardColor }) => {
     return (
         <div className='card'>
-            <div className='header'>
+            <div className='header' style={{ backgroundColor: cardColor }}>
                 <img src={image} alt={name} />
             </div>
             <div className='footer'>
