@@ -4,7 +4,8 @@ import './Banner.css';
 const Banner = () => {
     return (
         <header className='banner'>
-            <img src="/images/banner.png" alt="banner principal da página do Organo" />
+            <img src="/images/gwent.png" alt="banner principal da página do Organo" />
+            <p>Organize seu deck de cards!</p>
         </header>
     );
 };

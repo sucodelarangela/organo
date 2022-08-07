@@ -1,6 +1,10 @@
 .banner {
-    background-color: #6278f7;
+    background: url('/images/bg.png') top;
+    background-position: top;
+    background-size: 100% 100%;
     text-align: center;
+    color: #937b29;
+    font-size: 32px;
 }
 
 .banner img {
