@@ -10,16 +10,6 @@ import DropdownList from '../DropdownList';
 import Button from '../Button';
 
 const Form = (props) => {
-    const teams = [
-        'Neutros',
-        'Nilfgaard',
-        'Monstros',
-        'Skellige',
-        'Reinos do Norte',
-        "Scoia'tael",
-        'Sindicato'
-    ];
-
     // states
     const [name, setName] = useState('');
     const [job, setJob] = useState('');
@@ -63,7 +53,7 @@ const Form = (props) => {
                 />
                 <DropdownList
                     label='Facção'
-                    items={teams}
+                    items={props.teamNames}
                     value={team}
                     changed={value => setTeam(value)}
                 />

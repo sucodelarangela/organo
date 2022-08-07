@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form registeredProfessionals={professional => handleNewProfessional(professional)} />
+      <Form teamNames={teams.map((team) => team.name)} registeredProfessionals={professional => handleNewProfessional(professional)} />
       {
         teams.map((team) => (
           <Team
