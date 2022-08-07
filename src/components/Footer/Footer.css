@@ -1,0 +1,28 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #6278f7;
+    background-image: url('/images/fundo.png');
+    padding: 75px;
+    justify-items: center;
+}
+
+footer div {
+    display: flex;
+    gap: 32px;
+}
+
+footer div > img {
+    width: 32px;
+}
+
+footer .logo {
+    width: 166px;
+}
+
+footer p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
