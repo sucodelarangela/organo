@@ -9,10 +9,13 @@ const Team = (props) => {
                 backgroundColor: props.secondaryColor
             }}
         >
-            <h3 style={{ borderColor: props.primaryColor }}
-            >{props.name}</h3>
-            <Card />
-            <Card />
+            <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
+
+            <div className='professionals'>
+                {
+                    props.professionals.map(professional => <Card name={professional.name} cardType={professional.cardType} image={professional.image} />)
+                }
+            </div>
         </section>
     );
 };

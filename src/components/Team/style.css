@@ -9,3 +9,10 @@
     display: inline-block;
     padding: 8px;
 }
+
+.professionals {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}

@@ -1,15 +1,15 @@
 import './style.css';
 
 // DUMB COMPONENT
-const Card = () => {
+const Card = ({ name, cardType, image }) => {
     return (
         <div className='card'>
             <div className='header'>
-                <img src="https://github.com/sucodelarangela.png" alt="Angela Caldas" />
+                <img src={image} alt={name} />
             </div>
             <div className='footer'>
-                <h4>Angela Caldas</h4>
-                <h5>Desenvolvedora</h5>
+                <h4>{name}</h4>
+                <h5>{cardType}</h5>
             </div>
         </div>
     );

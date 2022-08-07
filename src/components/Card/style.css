@@ -10,8 +10,10 @@
 .card img {
     width: 100px;
     border-radius: 50%;
+    /* clip-path: circle(50px at 50% 50px); */
     position: relative;
     bottom: -50px;
+    /* bottom: -75px; */
 }
 
 .card .footer {
