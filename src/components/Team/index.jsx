@@ -3,7 +3,8 @@ import './style.css';
 
 const Team = (props) => {
     return (
-        <section
+        // returning the section only if we have professionals on the section
+        (props.professionals.length > 0) && <section
             className='team'
             style={{
                 backgroundColor: props.secondaryColor
@@ -13,7 +14,7 @@ const Team = (props) => {
 
             <div className='professionals'>
                 {
-                    props.professionals.map(professional => <Card name={professional.name} cardType={professional.cardType} image={professional.image} />)
+                    props.professionals.map(professional => <Card key={professional.name} name={professional.name} job={professional.job} image={professional.image} />)
                 }
             </div>
         </section>

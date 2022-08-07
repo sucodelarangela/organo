@@ -12,7 +12,7 @@ import Button from '../Button';
 const Form = (props) => {
     // states
     const [name, setName] = useState('');
-    const [cardType, setCardType] = useState('');
+    const [job, setJob] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
 
@@ -21,10 +21,14 @@ const Form = (props) => {
         // sending professional data to App.js state
         props.registeredProfessionals({
             name,
-            cardType,
+            job,
             image,
             team
         });
+        setName('');
+        setJob('');
+        setImage('');
+        setTeam('');
     };
 
     return (
@@ -42,8 +46,8 @@ const Form = (props) => {
                     label='Tipo'
                     placeholder='Digite seu cargo'
                     required={true}
-                    value={cardType}
-                    changed={value => setCardType(value)}
+                    value={job}
+                    changed={value => setJob(value)}
                 />
                 <InputField
                     label='Imagem'

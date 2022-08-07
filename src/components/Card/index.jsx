@@ -1,7 +1,7 @@
 import './style.css';
 
 // DUMB COMPONENT
-const Card = ({ name, cardType, image }) => {
+const Card = ({ name, job, image }) => {
     return (
         <div className='card'>
             <div className='header'>
@@ -9,7 +9,7 @@ const Card = ({ name, cardType, image }) => {
             </div>
             <div className='footer'>
                 <h4>{name}</h4>
-                <h5>{cardType}</h5>
+                <h5>{job}</h5>
             </div>
         </div>
     );
