@@ -180,7 +180,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner imgSrc="/images/gwent.png" altText="banner principal da página do Organo" />
       <Form teamNames={teams.map((team) => team.name)} registeredProfessionals={professional => handleNewProfessional(professional)} />
       {
         teams.map((team) => (
