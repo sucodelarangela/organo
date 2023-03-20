@@ -5,10 +5,10 @@ interface InputFieldProps {
     label: string;
     value: string;
     placeholder: string;
-    required: boolean;
+    required?: boolean;
 }
 
-const InputField = ({ changed, label, placeholder, required, value }: InputFieldProps) => {
+const InputField = ({ changed, label, placeholder, value, required = false }: InputFieldProps) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         changed(e.target.value);
     };
