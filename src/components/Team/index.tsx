@@ -14,28 +14,30 @@ interface TeamProps {
 const Team = ({ name, primaryColor, professionals, secondaryColor }: TeamProps) => {
     return (
         // returning the section only if we have professionals on the section
-        (professionals.length > 0) && <section
-            className='team'
-            style={{
-                backgroundColor: secondaryColor
-            }}
-        >
-            <h3 style={{ borderColor: primaryColor }}>{name}</h3>
+        (professionals.length > 0) ? (
+            <section
+                className='team'
+                style={{
+                    backgroundColor: secondaryColor
+                }}
+            >
+                <h3 style={{ borderColor: primaryColor }}>{name}</h3>
 
-            <div className='professionals'>
-                {
-                    professionals.map(professional =>
-                        <Card
-                            key={professional.name}
-                            cardColor={primaryColor}
-                            name={professional.name}
-                            job={professional.job}
-                            image={professional.image}
-                        />
-                    )
-                }
-            </div>
-        </section>
+                <div className='professionals'>
+                    {
+                        professionals.map(professional =>
+                            <Card
+                                key={professional.name}
+                                cardColor={primaryColor}
+                                name={professional.name}
+                                job={professional.job}
+                                image={professional.image}
+                            />
+                        )
+                    }
+                </div>
+            </section>
+        ) : (<></>)
     );
 };
 

@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Form from './components/Form';
 import Team from "./components/Team";
+import { IProfessional } from "./shared/interfaces/IProfessional";
 
 function App() {
   const teams = [
@@ -44,7 +45,7 @@ function App() {
     }
   ];
 
-  const [professionals, setProfessionals] = useState([
+  const [professionals, setProfessionals] = useState<IProfessional[]>([
     {
       name: 'Yennefer: Ilusionista',
       job: 'Humano, Mago',
@@ -173,7 +174,7 @@ function App() {
     }
   ]);
 
-  const handleNewProfessional = (professional) => {
+  const handleNewProfessional = (professional: IProfessional) => {
     // create a new array with all the previous professionals and add the new one at the end
     setProfessionals([...professionals, professional]);
   };
